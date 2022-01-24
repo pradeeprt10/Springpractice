@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="emp" class="com.practice.SpringPractice.Employee">
+		<property name="empid" value="100" />
+		<property name="phone">
+			<list>
+				<value>10000</value>
+				<value>10001</value>
+				<value>10002</value>
+			</list>
+		</property>
+		<property name="address">
+			<set>
+				<value>Odisha</value>
+				<value>Hyderabad</value>
+				<value>Banglore</value>
+			</set>
+		</property>
+		<property name="projectid">
+			<map>
+				<entry key="proj" value="Emerson" />
+				<entry key="proj1" value="Emerson1" />
+			</map>
+		</property>
+
+	</bean>
+
+</beans>

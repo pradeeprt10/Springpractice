@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	      http://www.springframework.org/schema/beans/spring-beans.xsd
+	      http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd
+         http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+	<context:annotation-config />
+	<util:list list-class="java.util.LinkedList" id="phoneutil">
+		<value>999999</value>
+		<value>888888</value>
+		<value>777777</value>
+		<value>666666</value>
+	</util:list>
+	<util:set set-class="java.util.HashSet" id="adressutil">
+		<value>Hyd</value>
+		<value>BBSR</value>
+		<value>CTC</value>
+		<value>RKL</value>
+	</util:set>
+	<util:map map-class="java.util.HashMap" id="projectutil">
+		<entry key="pro1" value="Emerson1" />
+		<entry key="pro2" value="Emerson2" />
+		<entry key="pro3" value="Emerson3" />
+	</util:map>
+
+	<bean class="com.practice.SpringPractice.Salary" name="sal1">
+		<property name="salpack" value="100000" />
+		<property name="band" value="U4" />
+	</bean>
+	<bean class="com.practice.SpringPractice.Salary" name="sal2">
+		<property name="salpack" value="100001" />
+		<property name="band" value="U4" />
+	</bean>
+
+
+	<bean class="com.practice.SpringPractice.Employee" name="emp12" >
+		<property name="empid" value="100" />
+		<property name="name" value="Pradeep" />
+		<property name="phone" ref="phoneutil" />
+		<property name="address" ref="adressutil" />
+		<property name="projectid" ref="projectutil" />
+	</bean>
+	
+
+
+</beans>
